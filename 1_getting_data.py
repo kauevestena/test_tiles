@@ -8,4 +8,12 @@ for column in data.columns:
     if data[column].dtype == object:
         data[column] = data[column].astype(str)
 
+
+data = data[['name','highway','geometry']]
+
+print(list(data.columns))
+
+# data = data[[]]
+
 data.to_parquet('osm_data.parquet')
+# data.to_file('osm_data.gpkg', driver='GPKG')
