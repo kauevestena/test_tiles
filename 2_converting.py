@@ -9,8 +9,8 @@ filename = 'osm_data.gpkg'
 
 # regular_conversion = f'{ogr2ogr_path} -f GPKG test.gpkg {filename} -progress'
 # runstring_foldertiles = f'{ogr2ogr_path} -f MVT osm_data_tiles {filename} -dsco MINZOOM=12 -dsco MAXZOOM=20 -progress'
-runstring_mbtiles = f'{ogr2ogr_path} -f MVT osm_data_tiles.mbtiles {filename} -dsco MINZOOM=12 -dsco MAXZOOM=20 -progress'
-runstring_pmtiles = f'{ogr2ogr_path} -f PMTiles osm_data_tiles.pmtiles {filename} -dsco MINZOOM=12 -dsco MAXZOOM=20 -progress'
+runstring_mbtiles = f'{ogr2ogr_path} -f MVT osm_data_tiles_max19.mbtiles {filename} -dsco MINZOOM=12 -dsco MAXZOOM=19 -progress'
+runstring_pmtiles = f'{ogr2ogr_path} -f PMTiles osm_data_tiles_max19.pmtiles {filename} -dsco MINZOOM=12 -dsco MAXZOOM=19 -progress'
 
 # for runstring in [runstring_foldertiles,runstring_mbtiles, runstring_pmtiles]:
 for runstring in [runstring_mbtiles, runstring_pmtiles]:
