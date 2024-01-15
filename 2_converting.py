@@ -3,7 +3,7 @@ import os
 from time import sleep,time
 
 ogr2ogr_path = r"C:\OSGeo4W\bin\ogr2ogr.exe"
-filename = 'osm_data.gpkg'
+filename = 'osm_data.parquet'
 
 # ogr2ogr -f MVT  "C:\Users\kaue\Documents\tiles" "C:\Users\kaue\Documents\other_footways.parquet" -dsco MAXZOOM=22
 
