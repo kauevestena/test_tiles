@@ -27,4 +27,4 @@ jobs:
       - run: docker pull ghcr.io/osgeo/gdal:alpine-normal-latest
       - run: ls
       - run: docker run ghcr.io/osgeo/gdal:alpine-normal-latest ogrinfo --formats
-      - run: docker run ghcr.io/osgeo/gdal:alpine-normal-latest ogrinfo data/osm_data.parquet
+      - run: docker run --rm -v /data:/data ghcr.io/osgeo/gdal:alpine-normal-latest ogrinfo osm_data.parquet
