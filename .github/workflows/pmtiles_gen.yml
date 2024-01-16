@@ -21,8 +21,10 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: "3.11"
-          cache: 'pip'
+          # cache: 'pip'
 
       # - run: docker pull osgeo/gdal # FULL VERSION
       - run: docker pull ghcr.io/osgeo/gdal:alpine-normal-latest
-      - run: ls -l
+      - run: ls
+      - run: docker run ghcr.io/osgeo/gdal:alpine-normal-latest ogrinfo --formats
+      - run: docker run ghcr.io/osgeo/gdal:alpine-normal-latest ogrinfo data/osm_data.parquet
