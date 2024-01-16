@@ -1,4 +1,4 @@
-name: manual_stash
+name: generate_pmtiles
 
 # Controls when the workflow will run
 on:
@@ -18,4 +18,4 @@ jobs:
       #### actions/checkout 
       - uses: actions/checkout@v3
 
-      - run: git stash
+      - run: docker pull ghcr.io/osgeo/gdal:ubuntu-small-3.8.3
